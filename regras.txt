@@ -1,0 +1,422 @@
+
+------------------
+
+********
+LABSCAPE
+********
+
+==========
+O Jogo
+==========
+Labscape é uma luta pela liberdade - animais de laboratório usados em
+experimentos
+crueis lutam por suas vidas e po rum lugar ao Sol. Mas cuidado -
+não adianta sair sem ter nada para comer. E não adianta ter muita comida,
+se você não chegar na saida a tempo.
+
+
+============
+Componentes:
+============
+1. Um número indeterminado de módulos de tabuleiro - cada
+módulo tendo 3x3 casas, com encaixes ao redor de cada casa para paredes. Antes
+de cada partida escolhe-se de quantos módulos será o jogo, quantos módulos
+em cada andar
+2. Um tabuleiro a parte com casas numeradas de 1 a 63 (sugestão para
+tabuleiro 8x8).
+Ese tabuleiro serve para marcar: quantos minutos foram transcorridos
+numa partida
+para cada jogador, o tempo de "gatilho", em que o robo é ativado, e a quantidade
+coletiva de chaves
+3. Dois marcadores para cada personagem - um para se mvoer no laboratório e um
+para acompanhar o tempo transcorrido. (Durante a oficina foi feito o design
+e modelagem de 4 personagens, mas nada impede que o jogo seja jogado
+com mais personagens e jogadores)
+4. Várias fichas indicando os itens de "comida", "item de
+laboraatório" e "chave" -
+essas fichas são usadas durant eo jogo para indicar o que existe em cada sala,
+e, havendo número suficente das mesmas, podem ser usadas para indicar
+a quantos itens cada jogador tem (entre chave e comida).
+5. Uma peça paraindicar o "robô perseguidor"
+6. Uma peça para indicar a saída de cada nível
+7. Várias paredes em L que se encaixam nos módulos de tabuleiro.
+Pelo menos 4 paredes para cada módulo a ser usado na partida.
+8. Tabelas com resumo dos efeitos de rolagem de dados e quantidades
+
+
+
+
+========
+Regras
+========
+1. O jogo é semi-colaborativo: apesar de existir vitória e derrota
+individuais, sem um minimo de colaboração, todos perdem
+
+2. A história do jogo é de vários animais  que fogem do laboratório.
+No processo precisam coletar alguns itens, evitar armadilhas e
+alarmes, e ficar de olho no tempo: se amanhecer, quem ainda não
+conseguiu sair do laboratório perde.
+
+3. o tabuleiro é modular, composto de módulos de 3x3 casas, que podem
+ser arranjadas lado a lado, ou em varios andares, num layout a ser
+combinado para cada partida.
+
+
+Preparação do tabuleiro
+======================
+
+A preparação do tabuleiro já é parte do jogo:
+
+1. Antes do inicio os jogadores combinam qual será o formato do prédio:
+pode ser por exemplo, um único módulo térreo de 3x3 casas, podem ser 3
+módulos colocados um sobre o outro, ou uma verdadeira pirâmide com 8
+módulos no térreo,
+6 no segundo andar, 3 no terceito e mais um 4 andar. Não há regra para
+disposição
+dos módulos - deve-se levar em conta que quanto mais módulos, mais tempo
+leva uma partida.
+
+2. ao começar o jogo, os módulos do andar térreo são colocados -
+sorteia-se o primeiro jogador com uma jogade de dados (2d6, maior
+número joga primeiro, segue em sentido horário).
+
+3. um jogador por vez coloca um elemento no tabuleiro, escolhendo dentre:
+  a. uma parede em "L"
+  b. uma ficha representando um código de saida (chave), um item de
+comida (tesouro), um item especial
+colocam-se itens até se ter todas as casas do andar preenchidas com um
+item, e pelo menos 4 paredes em L em cada módulo (as paredes devem ser
+distribuidas de forma a suportar os andares superiores).
+
+4. Ao ser completado o último módulo, sorteia-se a posição inicial de
+cada jogador com os dados de 6 lados: joga-se o dado uma vez para a
+coordenada de coluna - e uma vez para a coordenada de linha de cada
+personagem. É importante que o sorteio tenha uma probabilidade
+uniforme para todas as casas
+     a. No caso de só existirem 3 casas numa direção, para os
+resultados 4,5,6 subtrai-se três. (módulo 3)
+     b. Caso haja mais de 3 módulos numa direção (mais de 6 casas)
+jogam se dois dados (em sequência, ou com cores diferentes): se o
+primeiro dado for par, soma-se seis ao resultado do  outro dado. Senão
+o primeiro dado é ignorado. (desta forma podemos ter resultados
+uniformes entre 1 e 12). Para 9 casas,e resultados entre 10 e 12,
+rolar de novo os dados.
+     c. Para mais de 12 casas numa mesma direção, o primeiro dado tem
+valor "0" para os resultados 1 e 4, "6" para os resultados 2 e 5 e
+"12" para os resultados "3" e "6". Números maiores do que o número de
+casas implicam na re-rolagem.
+     (Alternativamente pode-se usar um app/computador para gerar
+numeros cordenadas uniformemente distribuidas)
+
+5. Sorteia-se a posição da saida do andar, e do Robô, conforme
+descrito no item 6.
+    a. se o rob de sua posição inical, estiver isoladod e todos os
+outros jogadores, sua posição deve
+    ser rolada novamente, até que haja um caminho sem paredes do robô
+até um jogador.
+
+6. Coloca-se cada jogador na posição antes da casa marcada como "1" no
+tabuleiro de marcação de tempo.
+Marca-se a cada 7 casas, uma casa especial (pode-se usar uma fixa de
+item de laboratório) para indicar
+o gatilho para movimentação do robô.
+
+7. Cada jogador pode se mover, começando de quem está mais para trás
+no marcador de tempo, ou o personagem que quem estiver por baixo de
+outros no caso dois estejam na mesma posição no marcador de tempo.
+Exclusivamente para a primeira jogada mantem-se o primeiro jogador
+sorteado na preparação e o sentido horário dos jogadores.
+
+O Jogo
+=======
+
+1. Para cada ação de andar uma casa, gasta 1 "minuto" - o marcador do
+jogador no contador de tempo é movido concomitantemente (ou com um
+"marcador de sombra" para se lembrar de onde começou o movimento). O
+jogador pode se mover para casas adjacentes na horizontal ou vertical
+(em 2D) desde que não haja uma parde impedindo o movimento. Também é
+possível passar pela casa onde está o Robô (mas não fazer açoes lá, a
+não ser sair do andar/labirinto. Também não se pega uma chave onde
+está o robo)
+
+2. Em casas com chaves e items de comida,  pega-se uma chave
+automaticamente, sem rolagem ou gasto de tempo.  Para chaves
+adicionais ou  comida, gasta-se um minuto por tentativa e rolam-se os
+dados, na tabela de chance de obter comida. Isso pode ser feito quatas
+vezes quantas desejadas, gastando sempre um minuto por tentativa.
+    a. para achar um item de comida, rolam-se 2D6 - cada rolagem
+consecutiva sem que o jogador saia da mesma sala, avança-se um nível
+de dificuldade na tabela.
+    b. Os itens de comida coletados são contabilizados com cada
+jogador. O total de chaves do grupo é marcado no tabuleiro em que se
+marca o tempo transcorrido. Isso é, quando o grupo tiver 6 chaves,
+    um marcador anquele tabuleiro estará na casa 6.
+    c. numa sala com item especial, deve-se rolar na tabela a parte.
+Só um item especial pode ser obtido em cada sala. (sujeito a
+playtest). Gasta-se um minuto para uma rolagem de item especial
+Tabela de rolagem:
+
+Tentativa, Numero dos dados, Resultado:
+1, 2-4, 2
+1, 5-8, 1
+1, 9-12, -1
+2, 2-3, 2
+2, 4-7, 1
+2, 8-12, -1
+3, 2, 3
+3, 3-6, 1
+3, 7-12, -1
+4, 2, 4
+4, 3-5, 1
+4, 6-11, -1
+4, 12, -2
+5, 2, 5
+5, 3-4, 1
+5, 5-11, -1
+5, 12, -3
+5, 2, 6
+6, 3, 1
+6, 4-11, -1
+6, 12, -4
+---------
+A tabela permanece a mesma que para a 6 tentativa para rolagens subsqequentes
+NB. Os itens que cada jogador pega ou perde são contabilizados a parte
+dos marcadores no tabuleiro. Os marcadores no tabuleiro continuam os
+mesmos até que todos tenham saído do andar
+
+
+Tabela de itens especiais é a seguinte:
+    (estou sem atabela no momento - está a lápis junto com as folhas do jogo
+     na bancada do SESC. A idéia é uma tabela simétrica, com alguns
+     acontecimentos positivos, outros negativos (perdas menore suqe os ganhos),
+     e outro ambíguos)
+
+3. Um jogador também pode mover as paredes. Isso é feito em cada sala
+acionado-se chaves e botões em paineis. As regras para se mover
+paredes são:
+    a. Pode-se  mover, girando pelo vértice, qualquer parede que tenha
+um vértice num ods cantos da casa em que o jogador se encontra
+    b. Pode-se mover uma parede girando-a ao redor da casa em que o
+jogador se encontra: isso é, se os dois lados do L são paredes da casa
+atual, pode-se recolocar essa parede em qualquer posição, mantendo-se
+duas paredes fechadas pela mesma na casa atual
+    c. a parede não pode coincidir com outras paredes, ou ter um dos
+lados se projetando para fora de um módulo (de 3x3).
+    d. NUNCA SE PODE FECHAR O ROBÔ: sempre tem que haver pelo menos um
+caminho desimpedido do Robô ae um jogador.
+    e. Caso seja impossível outra forma de acesso a aprtes do andar, -
+o que deve ser verificado por comum acordo de todos os jogadores,
+pode-se mover como indicado em (a) ou (b) uma parde numa casa
+adjacente a casa em que o personagem está.
+    f. a movimentação de uma parede gasta 1 minuto de tempo.
+
+4. Um jogador pode passar ao andar de baixo ou sair do prédio -
+    a. sair do andar ou do prédio gasta um minuto
+    b. para isso, o grupo deve ter coletivamente um número mínimo de
+chaves, baseado no número de módulos de tabuleiro jogados até o andar
+corrente (proposta: 7 chaves/módulo).
+        Exemplo - num jogo numa "pirâmide" com 3 módulos no térreo, 2
+no primeiro andar e 1 no segundo andar, a equipe deverá ter 7 chaves
+antes do primeiro jogador passar do segundo para o primeiro andar, 21
+chaves antes do primeiro jogador passar para o térreo, e 42 chaves
+para alguém poder sair do prédio
+
+    c. deve-se colocar um marcdor 7 minutos a frente do momento em que
+o 1º jogador saiu de um andar ou do prédio. Ele não joga mais até que
+todos os jogadores tenham deixado o andar.
+          - ao se estourar o limite de tempo do andar, ou todos
+deixarem o andar, remove-se todos os módulos daquele andar do prédio.
+O jogo procede no andar de baixo. A posição inicial dos jogadores, da
+saída e do robô é sorteada como nos itens 4 e 5 da preparação do jogo
+    d. os jogadores que não conseguirem sair do andar até que seu
+contador de tempo chegue no marcador de limite, são transportados ao
+próximo andar, mas sofrem uma penalidade de 5 minutos (move-se seu
+marcador 5 minutos pra frente) e perdem _toda_ a comida que estavam
+levando (mas não as chaves).
+        - Se ssa penalidade fosse ativar o robô no novo andar, ele não
+será ativado - apenas um jogador ativo pode ativar o robô.
+    e. Um jogador que não alcançar a saída do prédio (i.e. a saída no
+andar térreo) a tempo, "perdeu" o jogo e não pôde deixar o prédio.
+
+5. O total de minutos disponíveis antes da partida acabar é em função
+do número de módulos. Os jogadores que não conseguirem atingir a saída
+do andar térreo (e sairem) antes do total de tempo estipulado perdem o
+jogo - isso pode acarretar na situação em que todos perdem. No mundo
+do jogo, significa que amanheceu, e os cientistas e trabalhadores do
+laboratório chegarame  prenderam os animais de volta.
+
+     O total de minutos para a partida é calculado de forma que cada
+jogador tenha que pegar uma chave a cada X minutos gastos em
+movimentação para atingir o total de chaves necessário pra saida.
+    - sugestão para jogo "fácil" X = 6 minutos -
+                    jogo "médio" X = 5 minutos
+                    jogo muito dificil = 4.5 minutos
+                    jogo impossibru X = 4 minutos
+
+    Jogo fácil ( o número antes da vŕigula é númeo de módulos, depois
+da virgula, o total de tempo):
+
+jogadores|      2       |       3       |       4       |       5
+ |       6       |
+módulos  |              |               |               |
+ |               |
+         |      7, 21   |       7, 14   |       7, 11   |       7, 9
+ |       7, 7    |
+         |      14, 42  |       14, 28  |       14, 21  |       14, 17
+ |       14, 14  |
+         |      21, 63  |       21, 42  |       21, 32  |       21, 26
+ |       21, 21  |
+         |      28, 84  |       28, 56  |       28, 42  |       28, 34
+ |       28, 28  |
+         |      35, 105 |       35, 70  |       35, 53  |       35, 43
+ |       35, 35  |
+         |      42, 126 |       42, 84  |       42, 63  |       42, 51
+ |       42, 42  |
+         |      49, 147 |       49, 98  |       49, 74  |       49, 59
+ |       49, 49  |
+         |      56, 168 |       56, 112 |       56, 84  |       56, 68
+ |       56, 56  |
+         |      63, 189 |       63, 126 |       63, 95  |       63, 76
+ |       63, 63  |
+
+Médio:
+
+jogadores|      2       |       3       |       4       |       5
+ |       6       |
+módulos  |              |               |               |
+ |               |
+         |      7, 18   |       7, 12   |       7, 9    |       7, 7
+ |       7, 6    |
+         |      14, 35  |       14, 24  |       14, 18  |       14, 14
+ |       14, 12  |
+         |      21, 53  |       21, 35  |       21, 27  |       21, 21
+ |       21, 18  |
+         |      28, 70  |       28, 47  |       28, 35  |       28, 28
+ |       28, 24  |
+         |      35, 88  |       35, 59  |       35, 44  |       35, 35
+ |       35, 30  |
+         |      42, 105 |       42, 70  |       42, 53  |       42, 42
+ |       42, 35  |
+         |      49, 123 |       49, 82  |       49, 62  |       49, 49
+ |       49, 41  |
+         |      56, 140 |       56, 94  |       56, 70  |       56, 56
+ |       56, 47  |
+         |      63, 158 |       63, 105 |       63, 79  |       63, 63
+ |       63, 53  |
+
+Muito dificil:
+
+jogadores|      2       |       3       |       4       |       5
+ |       6       |
+módulos  |              |               |               |
+ |               |
+         |      7, 16   |       7, 11   |       7, 8    |       7, 7
+ |       7, 6    |
+         |      14, 32  |       14, 21  |       14, 16  |       14, 13
+ |       14, 11  |
+         |      21, 48  |       21, 32  |       21, 24  |       21, 19
+ |       21, 16  |
+         |      28, 63  |       28, 42  |       28, 32  |       28, 26
+ |       28, 21  |
+         |      35, 79  |       35, 53  |       35, 40  |       35, 32
+ |       35, 27  |
+         |      42, 95  |       42, 63  |       42, 48  |       42, 38
+ |       42, 32  |
+         |      49, 111 |       49, 74  |       49, 56  |       49, 45
+ |       49, 37  |
+         |      56, 126 |       56, 84  |       56, 63  |       56, 51
+ |       56, 42  |
+         |      63, 142 |       63, 95  |       63, 71  |       63, 57
+ |       63, 48  |
+
+
+Impossibru:
+
+jogadores|      2       |       3       |       4       |       5
+ |       6       |
+módulos  |              |               |               |
+ |               |
+         |      7, 14   |       7, 10   |       7, 7    |       7, 6
+ |       7, 5    |
+         |      14, 28  |       14, 19  |       14, 14  |       14, 12
+ |       14, 10  |
+         |      21, 42  |       21, 28  |       21, 21  |       21, 17
+ |       21, 14  |
+         |      28, 56  |       28, 38  |       28, 28  |       28, 23
+ |       28, 19  |
+         |      35, 70  |       35, 47  |       35, 35  |       35, 28
+ |       35, 24  |
+         |      42, 84  |       42, 56  |       42, 42  |       42, 34
+ |       42, 28  |
+         |      49, 98  |       49, 66  |       49, 49  |       49, 40
+ |       49, 33  |
+         |      56, 112 |       56, 75  |       56, 56  |       56, 45
+ |       56, 38  |
+         |      63, 126 |       63, 84  |       63, 63  |       63, 51
+ |       63, 42  |
+
+
+
+Funções Python para gerar as tabelas acima:
+
+from math import ceil
+
+def calcula (modulos, jogadores, X=6):
+    chaves = modulos * 7
+    minutos = int(ceil(X * (1.0 / jogadores) * chaves))
+    return chaves, minutos
+
+def imprime(X=6):
+    print "jogadores" + "".join("|\t%d\t" % p for p in range(2,7)) + "|"
+    print "módulos  " + "".join("|\t\t" for p in range(2,7)) + "|"
+    for modulos in range(1, 10):
+        linha = []
+        for jogadores in range(2, 7):
+            linha.append(calcula (modulos, jogadores, X))
+        print " " * len("jogadores") +  "".join("|\t%s\t" %
+str(linha[p])[1:-1] for p in range(0,5)) + "|"
+
+6. Há um personagem perseguidor, um robô que patrulha o laboratório -
+a cada vez que o jogador mais adiantado cruza uma das casas marcadas
+(a principio, multiplos de 7 minutos - refinar), depois da jogada
+desse jogador, o robô se movimenta:
+    a. ele anda 3 casas
+    b. ele não move ou atravessa paredes
+    c. o movimento dele é "automatico" - na direção da casa que
+estiver com menos personagens (jogadores juntos formam "totens"). No
+caso de empate (ex. várias casas com apenas um jogador) - na direção
+do jogador mais próximo (caminho mais curto) - havendo jogadores a
+distâncias iguais, em direção ao jogador que tem mais comida.
+    d. quando o robô alcança um personagem, ele é transportado para
+uma posição aleatória no tabuleiro (sorteada como a posiçao inicial).
+O personagem perde 5 mintuos - isso é, seu pino vai 5 minutos pra
+frente no marcador de tempo (calibrar com playtest). O robô nao se
+move mais depois de pegar um personagem. Caso a posição do personagem
+coincida com a posição do robô, sortear novamente.
+    e. adicionalmente, o jogador perde 2 chaves quando é pego pelo
+robô - isso serve para incentivar
+    os jogadores a se protegerem mutuamente do robô. A chaves são
+descontadas do marcador coletivo de chaves do grupo.
+
+7. após todos os jogadores saírem no andar térreo - ou o tempo se
+esgotar, o jogo termina. Todos os que conseguiram sair são vencedores
+- o jogador com maior quantidade de comida pode anotar quanto
+conseguiu para seus fins particulares de manter um recorde pessoal!
+:-)
+
+------------
+3 dias depois:
+
+Jogamos agora  anoite no SESC com essas regras,e  está bem jogável,bem
+gostoso mesmo - não dá pra alguem sair egositicamente querendo pegar
+todas as comidas, por qeu o grupo todo perde se todos não se
+preocuparem em juntar chaves coletivamente.
+
+Mas sobra algum espaço de manobra para tentar o ganho pessoal em
+detrimento de outros - jogamos uams 3 - 4 partidas -aidna tem uns
+corner cases nessas regras, mas dá pra amaciar as mesmas em mais uma
+interação.
+
+(Em particular, uma coisa que precisamos fazer foi: se estiverem todos
+os personagens juntos na emsma csa, o robo nao os pega - eles ficam
+"imunes").
